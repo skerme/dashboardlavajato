@@ -239,7 +239,7 @@ XXXX=[]
 
 i=0
 while ( datainicial+ timedelta(days=(i*7))<= datetime.datetime.today()+ timedelta(days=0)  ) :
-  resulta=collection.aggregate( [   {"$match": { "dataDaVenda":{   "$gte": datainicial+ timedelta(days=(i*7)),"$lt": datainicial+ timedelta(days=(i*7+7)) } , "estado":{"$eq":1}}   },{       "$group": {"_id": "null"  ,     "RCB":{ "$sum":"$total" } }     }     ] )
+  resulta=collection.aggregate( [   {"$match": { "dataDaVenda":{   "$gte": datainicial+ timedelta(days=(i*7)),"$lte": datainicial+ timedelta(days=(i*7+7)) } , "estado":{"$eq":1}}   },{       "$group": {"_id": "null"  ,     "RCB":{ "$sum":"$total" } }     }     ] )
   aux=0
   for resul in resulta:            
             yyyy.append(resul["RCB"])
@@ -329,8 +329,8 @@ while ( datainicial+ timedelta(days=(i*7))<= datetime.datetime.today()+ timedelt
 collection=db['livrocaixas']
 
 # AQUI MUDA AS TABELAS E PIZZA
-datainicial= datetime.datetime(ANO, 12, 1, 4, 00, 00, 000000)
-datafinal= datetime.datetime(2023, 1, 1, 23, 00, 00, 000000)
+datainicial= datetime.datetime(2023, 1, 1, 4, 00, 00, 000000)
+datafinal= datetime.datetime(2023, 2, 1, 23, 00, 00, 000000)
 
 y7 = []
 
@@ -396,7 +396,7 @@ y7.append(total)
 
 
 
-
+print("fffffffffffffffffeeeeeeee", y7)
 
 
 
