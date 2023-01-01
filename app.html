@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-2.4.3.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-widgets-2.4.3.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div class="bk-root" id="6a42d1cc-7626-41ec-b7df-5dd97659666d" data-root-id="1048"></div>
+  
+    <script type="application/json" id="1050">
+      {"0ae6aa81-a12e-4612-85f8-a6eaaa7b58a8":{"defs":[],"roots":{"references":[{"attributes":{"code":"  console.log('date_range_slider: value=' + this.value, this.toString())   "},"id":"1049","type":"CustomJS"},{"attributes":{"end":1672444800000.0,"js_property_callbacks":{"change:value":[{"id":"1049"}]},"start":1640995200000.0,"value":[1451606400000.0,1483142400000.0]},"id":"1048","type":"DateRangeSlider"}],"root_ids":["1048"]},"title":"Bokeh Application","version":"2.4.3"}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('1050').textContent;
+              const render_items = [{"docid":"0ae6aa81-a12e-4612-85f8-a6eaaa7b58a8","root_ids":["1048"],"roots":{"1048":"6a42d1cc-7626-41ec-b7df-5dd97659666d"}}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>

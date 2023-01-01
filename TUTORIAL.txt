@@ -1,0 +1,19 @@
+1.git init
+2. git remote add origin https://github.com/skerme/dashboardlavajato.git
+
+3. git add .
+4. git commit -am "inicio"                   // esse "a" eh para nao precisar  do "git ." no caso de nao ter arquivo novo.
+5. git push -u origin master
+
+
+heroku login
+heroku git:remote -a dashboardlavajato
+git push heroku master
+heroku open
+
+executar  --> python app.py
+
+
+
+
+heroku logs --tail
