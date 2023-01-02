@@ -212,7 +212,7 @@ resulta=collection.aggregate(  [{"$match": { "dataDaVenda":{   "$gte": data1 ,"$
 total=0
 for resul in resulta:  
     total+=resul["quantidadeporvenda"]
-    yyy.append(total)
+yyy.append(total)
 
 
 
@@ -809,7 +809,7 @@ from pandas.core.frame import DataFrame
 nome=[]
 i=0
 while i<len(XXX):
-   
+   print("gggggggggggg",i, XXX, yyy,len(XXX),str(yyy[i])) 
    nome.append(str(yyy[i]))
    i=i+1
 
