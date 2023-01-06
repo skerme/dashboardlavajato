@@ -1068,7 +1068,7 @@ data = pd.Series(x).reset_index(name='value').rename(columns={'index': 'country'
 data['angle'] = data['value']/data['value'].sum() * 2*pi
 data['color'] = Category20c[len(x)]
 
-s7 = figure(width=300, height=150, title="DISTRIBUIÇÃO DA RECEITA: "+str(sum(y7))+"\n                      DEZEMBRO"   , toolbar_location=None,
+s7 = figure(width=300, height=150, title="DISTRIBUIÇÃO DA RECEITA: "+str(sum(y7))  , toolbar_location=None,
            tools="hover", tooltips="@country: @value", x_range=(-0.5, 1.0))
 
 s7.wedge(x=0, y=1, radius=0.4,
@@ -1143,7 +1143,7 @@ data = pd.Series(x).reset_index(name='value').rename(columns={'index': 'country'
 data['angle'] = data['value']/data['value'].sum() *2*pi
 data['color'] = Category20c[len(x)]
 
-s8 = figure(width=300,height=150, title="PAGAMENTOS AOS LAVADORES: "+str(sum(y8))+"\n                           NOVEMBRO"                   , toolbar_location=None,
+s8 = figure(width=300,height=150, title="PAGAMENTOS AOS LAVADORES: "+str(sum(y8)) , toolbar_location=None,
            tools="hover", tooltips="@country: @value", x_range=(-0.5, 1.0))
 
 s8.wedge(x=0, y=1, radius=0.4,
